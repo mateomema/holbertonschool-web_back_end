@@ -1,6 +1,5 @@
-export default function getResponseFromApi() {
-	return new Promise((resolve, reject) => {
+export default function getResponseFromAPI() {
+	return new Promise((resolve) => {
 		resolve('');
-		reject(new Error('Something bad happend'));
 	});
 }
