@@ -1,5 +1,5 @@
 import getResponseFromAPI from "./0-promise.js";
 
-const response = getResponseFromAPI(){
+const response = getResponseFromAPI(); {
   console.log(response);
 } 
