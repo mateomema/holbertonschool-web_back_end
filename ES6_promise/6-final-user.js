@@ -21,3 +21,4 @@ export default function handleProfileSignup(firstName, lastName, fileName) {
     }));
   return Promise.all([userPromise, photoPromise]);
 }
+
