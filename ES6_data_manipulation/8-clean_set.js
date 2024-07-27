@@ -1,14 +1,14 @@
 export default function cleanSet(set, startString) {
-    const arr = [];
-    if (typeof startString === 'undefined' || startString === '' || typeof startString !== 'string') {
-      return '';
-    }
-    set.forEach((element) => {
-      if (typeof element !== 'undefined') {
-        if (element.startsWith(startString)) {
-          arr.push(element.split(startString)[1]);
-        }
-      }
-    });
-    return arr.join('-');
+  if (typeof startString !== 'string' || startString.length === 0) {
+    return '';
   }
+  const result = [];
+
+  for (const value of set) {
+    if (typeof value === 'string' && value.startsWith(startString)) {
+      result.push(value.slice(startString.length));
+    }
+  }
+
+  return result.join('-');
+}
